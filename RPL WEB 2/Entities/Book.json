@@ -1,0 +1,71 @@
+{
+  "name": "Book",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Judul buku"
+    },
+    "author": {
+      "type": "string",
+      "description": "Nama penulis"
+    },
+    "genre": {
+      "type": "string",
+      "enum": [
+        "fiksi",
+        "non-fiksi",
+        "biografi",
+        "sejarah",
+        "sains",
+        "teknologi",
+        "bisnis",
+        "self-help",
+        "romance",
+        "thriller",
+        "fantasy",
+        "mystery",
+        "poetry",
+        "lainnya"
+      ],
+      "default": "fiksi",
+      "description": "Genre buku"
+    },
+    "publication_year": {
+      "type": "number",
+      "description": "Tahun terbit"
+    },
+    "description": {
+      "type": "string",
+      "description": "Deskripsi atau ringkasan buku"
+    },
+    "reading_status": {
+      "type": "string",
+      "enum": [
+        "belum_dibaca",
+        "sedang_dibaca",
+        "selesai"
+      ],
+      "default": "belum_dibaca",
+      "description": "Status membaca"
+    },
+    "rating": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Rating buku (1-5 bintang)"
+    },
+    "pages": {
+      "type": "number",
+      "description": "Jumlah halaman"
+    },
+    "isbn": {
+      "type": "string",
+      "description": "Nomor ISBN"
+    }
+  },
+  "required": [
+    "title",
+    "author"
+  ]
+}
